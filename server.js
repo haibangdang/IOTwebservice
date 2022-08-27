@@ -26,7 +26,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
 
 const db = require("./model/database");
-db.sequelize.authenticate();
+db.sequelize.authenticate()
+.then(() => {
+  console.log('Connection has been established successfully.');
+})
+.catch(err => {
+  console.error('Unable to connect to the database:', err);
+});
 
 require("./routes/routes.js")(app);
 

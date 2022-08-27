@@ -5,7 +5,7 @@ module.exports = {
     DB: "ded1b1kursclcg",
     dialect: "postgres",
     pool: {
-      max: 5,
+      max: 10,
       min: 0,
       acquire: 30000,
       idle: 10000
