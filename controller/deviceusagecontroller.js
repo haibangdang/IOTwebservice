@@ -30,20 +30,20 @@ exports.getAllDeviceInfo = (req, res) => {
             'station.stationName'
         ],
 
-        include: [
-            {
-                model: project.schema(schemaname),
-                attributes: []
-            },
-            {
-                model: station.schema(schemaname),
-                attributes: []
-            },
-            {
-                model: device.schema(schemaname),
-                attributes: []
-            }
-        ],
+        // include: [
+        //     {
+        //         model: project.schema(schemaname),
+        //         attributes: []
+        //     },
+        //     {
+        //         model: station.schema(schemaname),
+        //         attributes: []
+        //     },
+        //     {
+        //         model: device.schema(schemaname),
+        //         attributes: []
+        //     }
+        // ],
 
         raw: true
     })
@@ -83,20 +83,20 @@ exports.getDeviceInfo = (req, res) => {
             'station.stationName'
         ],
 
-        include: [
-            {
-                model: project.schema(schemaname),
-                attributes: []
-            },
-            {
-                model: station.schema(schemaname),
-                attributes: []
-            },
-            {
-                model: device.schema(schemaname),
-                attributes: []
-            }
-        ],
+        // include: [
+        //     {
+        //         model: project.schema(schemaname),
+        //         attributes: []
+        //     },
+        //     {
+        //         model: station.schema(schemaname),
+        //         attributes: []
+        //     },
+        //     {
+        //         model: device.schema(schemaname),
+        //         attributes: []
+        //     }
+        // ],
 
         raw: true
     })

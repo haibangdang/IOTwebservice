@@ -2,22 +2,14 @@
 const express = require('express');
 const app = express();
 
-
-
-
 const serverconfig = require("./config/serverconfig.js");
 
 const cors = require("cors");
-
-
 
 var corsOptions = {
   origin: "http://localhost:3000",
   credentials: true
 };
-
-
-
 
 app.get('/', function(req, res){
   res.send('Hello');

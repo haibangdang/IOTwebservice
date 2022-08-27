@@ -214,16 +214,16 @@ exports.getAllDeviceName = async (schemaname) => {
     const list =  await device.schema(schemaname).findAll({
         attributes: [
             'id',
-            'key'
+            // 'key'
         ]
     })   
     .catch(err => {
          return [];
     });
 
-    list.forEach(function(value){
-        data[brokerConfig.feedDevice + value.key] = {id : value.id, workspace : schemaname};
-      });
+    // list.forEach(function(value){
+    //     data[brokerConfig.feedDevice + value.key] = {id : value.id, workspace : schemaname};
+    //   });
 
     return data;
 }

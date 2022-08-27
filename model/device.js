@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize, model) => {
-    const Device = sequelize.define("device", {
+    const Device = sequelize.define("devices", {
       id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -64,13 +64,13 @@ module.exports = (sequelize, Sequelize, model) => {
       timestamps: false 
     });
 
-    model.station.hasMany(Device);
-    model.project.hasMany(Device);
-    model.indicator.hasMany(Device);
+    // model.station.hasMany(Device);
+    // model.project.hasMany(Device);
+    // model.indicator.hasMany(Device);
 
-    Device.belongsTo(model.station);
-    Device.belongsTo(model.project);
-    Device.belongsTo(model.indicator);
+    // Device.belongsTo(model.station);
+    // Device.belongsTo(model.project);
+    // Device.belongsTo(model.indicator);
   
     return Device;
   };
