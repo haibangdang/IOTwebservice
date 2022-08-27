@@ -1,0 +1,109 @@
+//Lưu ý ssssss là workspace, nếu tạo workspace khác tên thì thay ssssss bằng workspace đã tạo
+
+
+POST
+localhost:9876/api/test/createaccount
+{
+    "accountname": "abcxyz",
+    "accountpassword": "abcxyz",
+    "projectid": 1,
+    "firstName": "abcxyz",
+    "lastname": "abcxyz",
+    "startdate": "1999-01-08 04:05:06+07",
+    "enddate": "1999-01-08 04:05:06+07",
+    "city": "abcxyz",
+    "district": "abcxyz",
+    "ward": "abcxyz",
+    "addressdetail": "abcxyz",
+    "phonenumber": "abcxyz",
+    "email": "abcxyz",
+    "accounttype": 1,
+    "accountrole": 2,
+    "avatar": "abcxyz"
+}
+
+create schema
+POST
+localhost:9876/api/workspace/create
+{
+    "workspacename": "ssssss",
+    "allowcreateacount": true,
+    "description": "abc xyz"
+}
+
+get n device, acbxxx la schema
+GET
+localhost:9876/api/device/getndevice/ssssss?startOffset=1&count=4
+
+create device
+POST
+localhost:9876/api/device/create/ssssss
+{
+    "parentid": 1,
+    "status": 1,
+    "protocol": 1,
+    "devicetype": 1,
+    "serialnumber": "1asda",
+    "createat": "1999-01-07T21:05:06.000Z",
+    "createby": 1,
+    "startdate": "1999-01-07T21:05:06.000Z",
+    "enddate": "1999-01-07T21:05:06.000Z",
+    "deleteat": "1999-01-07T21:05:06.000Z",
+    "deleteby": 1,
+    "updateat": "1999-01-07T21:05:06.000Z",
+    "updateby": 1,
+    "description": "adsasd"
+}
+
+
+create station
+POST
+localhost:9876/api/station/create/ssssss
+{
+    "stationName": "Tram Back Khoa",
+    "createat": "1999-01-07T21:05:06.000Z",
+    "createby": 1,
+    "startdate": "1999-01-07T21:05:06.000Z",
+    "enddate": null,
+    "deleteat": null,
+    "deleteby": null,
+    "updateat": null,
+    "updateby": null,
+    "phonenumber": "0987654321",
+    "balance": "100000",
+    "expireddate": "1999-01-07T21:05:06.000Z",
+    "qualityscore": 100,
+    "city": "HCM",
+    "district": "10",
+    "ward": "1",
+    "longitude": 1.001,
+    "latitude": 10.1,
+    "addressdetail": "Ly Thuong Kiet",
+    "decription": "asdasdas"
+}
+
+create procject
+POST
+localhost:9876/api/project/create/ssssss
+{
+    "customerid": 1,
+    "salePersonid": 1,
+    "projectName": "asdasd",
+    "createat": "1999-01-07T21:05:06.000Z",
+    "createby": 2,
+    "deleteat": null,
+    "deleteby": null,
+    "updateat": null,
+    "updateby": null,
+    "startdate": "1999-01-07T21:05:06.000Z",
+    "enddate": null,
+    "city": "HCM",
+    "district": "HCM",
+    "ward": "HCM",
+    "longitude": 10.1,
+    "latitude": 99.99,
+    "addressdetail": "asdasdasdas",
+    "fileattachecd": null,
+    "decription": null
+}
+
