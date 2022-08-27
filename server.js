@@ -1,3 +1,4 @@
+
 const express = require('express');
 const app = express();
 
@@ -11,7 +12,8 @@ const cors = require("cors");
 
 
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "https://danghaibang-iot-webservice.herokuapp.com/",
+  credentials: true
 };
 
 
