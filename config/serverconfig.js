@@ -1,3 +1,3 @@
 module.exports = {
-    serverport: 9876
+    serverport: process.env.PORT || 9876
 };
