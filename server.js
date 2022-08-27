@@ -30,6 +30,6 @@ db.sequelize.authenticate();
 
 require("./routes/routes.js")(app);
 
-app.listen(serverconfig.serverport, function(){
+app.listen(process.env.PORT || serverconfig.serverport, function(){
     console.log("Server start on localhost:%s", serverconfig.serverport);
 })
