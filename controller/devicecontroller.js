@@ -128,7 +128,7 @@ exports.getDeviceById = (req, res) => {
                 
                     datas.bang.push({
                       'id': item.id,
-                      'deviceName': itemdy.name,
+                      'deviceName': item.deviceName,
                       'parentId': item.parentId,
                       'status': item.status,
                       'protocol': item.protocol,
