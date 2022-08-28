@@ -118,7 +118,20 @@ exports.getDeviceById = (req, res) => {
     device.schema(schemaname).findByPk(id)
         .then(data => {
             if (data) {
-                res.status(statuscode.STATUS_OK).send(data);
+                var datas = {
+                    bang: []
+                };
+
+                for(var i in data) {    
+
+                    var item = data[i];   
+                
+                    datas.bang.push({ 
+                        item
+                    });
+                }
+                
+                res.status(statuscode.STATUS_OK).send(datas);
             } else {
                 res.status(statuscode.STATUS_NOT_FOUND).send("Can not find id");
             }
