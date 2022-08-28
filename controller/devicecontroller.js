@@ -122,9 +122,9 @@ exports.getDeviceById = (req, res) => {
                     bang: []
                 };
 
-                for(var i in data) {    
+                for(var item in data) {    
 
-                    var item = data[i];   
+                    // var item = data[i];   
                 
                     datas.bang.push({ 
                         item
