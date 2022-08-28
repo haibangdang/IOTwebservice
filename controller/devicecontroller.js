@@ -121,9 +121,34 @@ exports.getDeviceById = (req, res) => {
                 var datas = {
                     bang: []
                 };
-                datas.bang.push({ 
-                    data
-                });
+
+                for(var i in data) {    
+
+                    var item = data[i];   
+                
+                    datas.bang.push({
+                      'id': item.id,
+                      'deviceName': itemdy.name,
+                      'parentId': item.parentId,
+                      'status': item.status,
+                      'protocol': item.protocol,
+                      'deviceType': item.deviceType,
+                      'serialNumber': item.serialNumber,
+                      'createAt': item.createAt,
+                      'createBy': item.createBy,
+                      'startDate': item.startDate,
+                      'endDate': item.endDate,
+                      'deleteAt': item.deleteAt,
+                      'deleteBy': item.deleteBy,
+                      'updateAt': item.updateAt,
+                      'updateBy': item.updateBy,
+                      'description': item.description,
+                      'stationId': item.stationId,
+                      'projectId': item.projectId,
+                      'jsonEnable': item.jsonEnable,
+                      'key': item.key,
+                    });
+                }
                 
                 res.status(statuscode.STATUS_OK).send(datas);
             } else {
