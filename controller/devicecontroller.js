@@ -121,15 +121,9 @@ exports.getDeviceById = (req, res) => {
                 var datas = {
                     bang: []
                 };
-
-                for(var item in data) {    
-
-                    // var item = data[i];   
-                
-                    datas.bang.push({ 
-                        item
-                    });
-                }
+                datas.bang.push({ 
+                    data
+                });
                 
                 res.status(statuscode.STATUS_OK).send(datas);
             } else {
