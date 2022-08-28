@@ -119,37 +119,9 @@ exports.getDeviceById = (req, res) => {
         .then(data => {
             if (data) {
                 var datas = {
-                    bang: []
+                    bang: [data]
                 };
 
-                for(var i in data) {    
-
-                    var item = data[i];   
-                
-                    datas.bang.push({
-                      'id': item.id,
-                      'deviceName': item.deviceName,
-                      'parentId': item.parentId,
-                      'status': item.status,
-                      'protocol': item.protocol,
-                      'deviceType': item.deviceType,
-                      'serialNumber': item.serialNumber,
-                      'createAt': item.createAt,
-                      'createBy': item.createBy,
-                      'startDate': item.startDate,
-                      'endDate': item.endDate,
-                      'deleteAt': item.deleteAt,
-                      'deleteBy': item.deleteBy,
-                      'updateAt': item.updateAt,
-                      'updateBy': item.updateBy,
-                      'description': item.description,
-                      'stationId': item.stationId,
-                      'projectId': item.projectId,
-                      'jsonEnable': item.jsonEnable,
-                      'key': item.key,
-                    });
-                }
-                
                 res.status(statuscode.STATUS_OK).send(datas);
             } else {
                 res.status(statuscode.STATUS_NOT_FOUND).send("Can not find id");
