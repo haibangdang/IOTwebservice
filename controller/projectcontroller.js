@@ -30,7 +30,7 @@ exports.createProject = (req, res) => {
         projectName: req.body.projectName,
         addressDetail: req.body.addressDetail,
         description: req.body.description,
-        createdBy: req.body.user
+        createdBy: req.body.createdBy
     };
 
     project.schema(schemaname).create(newproject)
