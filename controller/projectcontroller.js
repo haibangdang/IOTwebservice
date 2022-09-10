@@ -126,4 +126,16 @@ exports.countProject = (req, res) => {
             res.status(statuscode.STATUS_ERROR).send(err);
         });
 }
+
+exports.getAllProjectInfo = (req, res) => {
+    const schemaname = req.params.schemaname;
+
+    project.schema(schemaname).findAll()
+        .then(data => {
+            res.status(statuscode.STATUS_OK).send(data);
+        })
+        .catch(err => {
+            res.status(statuscode.STATUS_ERROR).send(err);
+        });
+}
 //project ==============================================================

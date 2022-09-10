@@ -35,6 +35,8 @@ module.exports = app => {
 
     routerProject.get("/countall/:schemaname", project.countProject);
 
+    // routerProject.get("/getall/:schemaname", project.getAllProjectInfo);
+
     app.use("/api/project", routerProject);
 
     //station
