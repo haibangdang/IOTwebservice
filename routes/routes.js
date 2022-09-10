@@ -70,8 +70,8 @@ module.exports = app => {
     const deviceusage = require("../controller/deviceusagecontroller");
     const deviceManager = require("../BrokerConnection/devicemanager");
 
-    routerDevice.post("/create/:schemaname", deviceManager.createNewDevice);
-    //routerDevice.post("/create/:schemaname", device.createDevice);
+    // routerDevice.post("/create/:schemaname", deviceManager.createNewDevice);
+    routerDevice.post("/create/:schemaname", device.createDevice);
     routerDevice.put("/update/:schemaname", device.updateDevice);
     routerDevice.put("/delete/:schemaname", device.deleteDevice);
     routerDevice.get("/getalldevice/:schemaname", deviceusage.getAllDeviceInfo);
@@ -87,6 +87,17 @@ module.exports = app => {
 
 
 
+
+    //devcieType
+    var routeIndicator = require("express").Router();
+    const deviceType = require("../controller/devicetype");
+    routeIndicator.post("/create/devicetype/:schemaname", deviceType.createDeviceType);
+    routeIndicator.put("/update/devicetype/:schemaname", deviceType.updateDeviceType);
+    routeIndicator.put("/delete/devicetype/:schemaname", deviceType.deleteDeviceType);
+    routeIndicator.get("/getallindicator/devicetype/:schemaname", deviceType.getAllDeviceTypeInfo);
+    routeIndicator.get("/getindicator/devicetype/:schemaname", deviceType.getDeviceTypeInfo);
+
+    app.use("/api/indicator", routeIndicator);
 
 
     //Tracking data

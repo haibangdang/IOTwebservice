@@ -19,9 +19,9 @@ module.exports = (sequelize, Sequelize, model) => {
       timestamps: false 
     });
 
-    model.device.hasMany(deviceAttribute);
+    // model.device.hasMany(deviceAttribute);
 
-    deviceAttribute.belongsTo(model.device);
+    // deviceAttribute.belongsTo(model.device);
  
     return deviceAttribute;
   };

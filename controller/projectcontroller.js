@@ -7,25 +7,30 @@ exports.createProject = (req, res) => {
     const schemaname = req.params.schemaname;
 
     const newproject = {
-        customerId: req.body.customerId,
-        salePersonId: req.body.salePersonId,
+        // customerId: req.body.customerId,
+        // salePersonId: req.body.salePersonId,
+        // projectName: req.body.projectName,
+        // createAt: req.body.createAt,
+        // createBy: req.body.createBy,
+        // deleteAt: req.body.deleteAt,
+        // deleteBy: req.body.deleteBy,
+        // updateAt: req.body.updateAt,
+        // updateBy: req.body.updateBy,
+        // startDate: req.body.startDate,
+        // endDate: req.body.endDate,
+        // city: req.body.city,
+        // district: req.body.district,
+        // ward: req.body.ward,
+        // longitude: req.body.longitude,
+        // latitude: req.body.latitude,
+        // addressDetail: req.body.addressDetail,
+        // fileAttached: req.body.fileAttached,
+        // decription: req.body.decription
+
         projectName: req.body.projectName,
-        createAt: req.body.createAt,
-        createBy: req.body.createBy,
-        deleteAt: req.body.deleteAt,
-        deleteBy: req.body.deleteBy,
-        updateAt: req.body.updateAt,
-        updateBy: req.body.updateBy,
-        startDate: req.body.startDate,
-        endDate: req.body.endDate,
-        city: req.body.city,
-        district: req.body.district,
-        ward: req.body.ward,
-        longitude: req.body.longitude,
-        latitude: req.body.latitude,
         addressDetail: req.body.addressDetail,
-        fileAttached: req.body.fileAttached,
-        decription: req.body.decription
+        description: req.body.description,
+        createdBy: req.body.user
     };
 
     project.schema(schemaname).create(newproject)

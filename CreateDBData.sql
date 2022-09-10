@@ -12,7 +12,7 @@ declare
    counter integer := 0;
 begin
    while counter < 10 loop
-    INSERT INTO ssssss.projects (
+    INSERT INTO ssssss.project (
     "customerId", "salePersonId", "projectName", "createAt", "createBy", "startDate", "city", "district", "ward", "longitude", "latitude", "addressDetail") VALUES (
     '1'::integer, '1'::integer, 'asdasd'::character varying, '1999-01-08 04:05:06+07'::timestamp with time zone, '2'::integer, '1999-01-08 04:05:06+07'::timestamp with time zone, 'HCM'::character varying, 'HCM'::character varying, 'HCM'::character varying, '10.1'::double precision, '99.99'::double precision, 'asdasdasdas'::character varying);
     

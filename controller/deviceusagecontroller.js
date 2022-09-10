@@ -26,8 +26,8 @@ exports.getAllDeviceInfo = (req, res) => {
             // 'device.updateat',
             // 'device.updateby',
             // 'device.description',
-            'project.projectName',
-            'station.stationName'
+            // 'project.projectName',
+            // 'station.stationName'
         ],
 
         // include: [

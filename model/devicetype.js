@@ -16,7 +16,7 @@ module.exports = (sequelize, Sequelize, model) => {
       timestamps: false 
     });
 
-    model.device.belongsTo(devicetype);
+    // model.device.belongsTo(devicetype);
  
     return Device;
   };

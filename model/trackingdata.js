@@ -38,9 +38,9 @@ module.exports = (sequelize, Sequelize, model) => {
       timestamps: false 
     });
 
-    trackingdata.belongsTo(model.device);
+    // trackingdata.belongsTo(model.device);
 
-    model.device.hasMany(trackingdata);
+    // model.device.hasMany(trackingdata);
  
     return trackingdata;
   };

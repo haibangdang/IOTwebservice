@@ -19,12 +19,12 @@ module.exports = (sequelize, Sequelize, model) => {
       timestamps: false 
     });
 
-    model.station.hasMany(deviceusage);
-    model.device.hasMany(deviceusage);
-    model.project.hasMany(deviceusage);
-    deviceusage.belongsTo(model.station);
-    deviceusage.belongsTo(model.device);
-    deviceusage.belongsTo(model.project);
+    // model.station.hasMany(deviceusage);
+    // model.device.hasMany(deviceusage);
+    // model.project.hasMany(deviceusage);
+    // deviceusage.belongsTo(model.station);
+    // deviceusage.belongsTo(model.device);
+    // deviceusage.belongsTo(model.project);
   
     return deviceusage;
   };

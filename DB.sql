@@ -1,25 +1,41 @@
-CREATE TABLE Project(
-	id INT PRIMARY KEY,
-	projectID INT NOT NULL,
-	customerID INT NOT NULL,
-	salePersonID INT NOT NULL,
-	projectName CHAR(256) NOT NULL,
-	createAt TIMESTAMP NOT NULL,
-	createBy INT NOT NULL NOT NULL,
-	deleteAt TIMESTAMP,
-	deleteBy INT,
-	updateAt TIMESTAMP,
-	updateBy INT,
-	startDate TIMESTAMP NOT NULL,
-	endDate TIMESTAMP,
-	city CHAR(20),
-	district CHAR(20),
-	ward CHAR(20),
-	longitude DECIMAL(10,7),
-	latitude DECIMAL(10,7),
-	addressDetail CHAR(128),
-	fileAttached CHAR(256),
-	description CHAR(256)
+-- CREATE TABLE Project(
+-- 	id INT PRIMARY KEY,
+-- 	projectID INT NOT NULL,
+-- 	customerID INT NOT NULL,
+-- 	salePersonID INT NOT NULL,
+-- 	projectName CHAR(256) NOT NULL,
+-- 	createAt TIMESTAMP NOT NULL,
+-- 	createBy INT NOT NULL NOT NULL,
+-- 	deleteAt TIMESTAMP,
+-- 	deleteBy INT,
+-- 	updateAt TIMESTAMP,
+-- 	updateBy INT,
+-- 	startDate TIMESTAMP NOT NULL,
+-- 	endDate TIMESTAMP,
+-- 	city CHAR(20),
+-- 	district CHAR(20),
+-- 	ward CHAR(20),
+-- 	longitude DECIMAL(10,7),
+-- 	latitude DECIMAL(10,7),
+-- 	addressDetail CHAR(128),
+-- 	fileAttached CHAR(256),
+-- 	description CHAR(256)
+-- );
+
+
+
+CREATE TABLE Projects(
+	id SERIAL PRIMARY KEY,
+	projectName VARCHAR(256) NOT NULL,
+	addressDetail VARCHAR,
+    description VARCHAR,
+	-- StationNum INT DEFAULT 0,
+	-- UserNum INT DEFAULT 0,
+	-- DeviceTypesNum INT DEFAULT 0,
+	createdAt DATETIME DEFAULT NOW(),
+	createdBy VARCHAR(50),
+	updatedAt DATETIME
+	-- description VARCHAR
 );
 
 CREATE TABLE Station(

@@ -74,8 +74,8 @@ module.exports = (sequelize, Sequelize, model) => {
       timestamps: false 
     });
 
-    model.project.hasMany(Station);
-    Station.belongsTo(model.project);
+    // model.project.hasMany(Station);
+    // Station.belongsTo(model.project);
   
     return Station;
 };
