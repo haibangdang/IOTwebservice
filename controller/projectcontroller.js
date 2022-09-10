@@ -64,7 +64,7 @@ exports.updateProject = (req, res) => {
 
 exports.deleteProject = (req, res) => {
     const schemaname = req.params.schemaname;
-    const id = req.body.id;
+    const id = req.query.id;
 
     project.schema(schemaname).destroy({
         where: { id: id }
