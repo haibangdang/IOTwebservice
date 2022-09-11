@@ -1,6 +1,7 @@
 const db = require("../model/database");
 const statuscode = require("../config/statuscode");
 const project = db.project;
+const deviceType = db.deviceType;
 
 //project ==============================================================
 exports.createProject = (req, res) => {
@@ -44,7 +45,7 @@ exports.createProject = (req, res) => {
 
 exports.updateProject = (req, res) => {
     const schemaname = req.params.schemaname;
-    const id = req.body.id;
+    const id = req.query.id;
 
     if (!id) {
         res.sendStatus(statuscode.STATUS_NOT_FOUND);
@@ -130,6 +131,10 @@ exports.countProject = (req, res) => {
 exports.getAllProjectInfo = (req, res) => {
     const schemaname = req.params.schemaname;
 
+    // const count = await deviceType.count({
+    //     where: { projectID: projectID },
+    // });
+    
     project.schema(schemaname).findAll()
         .then(data => {
             res.status(statuscode.STATUS_OK).send(data);
