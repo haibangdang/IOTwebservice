@@ -44,8 +44,8 @@ module.exports = app => {
     const station = require("../controller/stationcontroller");
 
     routerStation.post("/create/:schemaname", station.createStation);
-    routerStation.post("/update/:schemaname", station.updateStation);
-    routerStation.post("/delete/:schemaname", station.deleteStation);
+    routerStation.put("/update/:schemaname", station.updateStation);
+    routerStation.put("/delete/:schemaname", station.deleteStation);
 
     routerStation.get("/getnstation/:schemaname", station.getNStation);
     routerStation.get("/getstationid/:schemaname", station.findStationById);
@@ -93,13 +93,16 @@ module.exports = app => {
     //devcieType
     var routeIndicator = require("express").Router();
     const deviceType = require("../controller/devicetype");
-    routeIndicator.post("/create/devicetype/:schemaname", deviceType.createDeviceType);
-    routeIndicator.put("/update/devicetype/:schemaname", deviceType.updateDeviceType);
-    routeIndicator.put("/delete/devicetype/:schemaname", deviceType.deleteDeviceType);
-    routeIndicator.get("/getallindicator/devicetype/:schemaname", deviceType.getAllDeviceTypeInfo);
-    routeIndicator.get("/getindicator/devicetype/:schemaname", deviceType.getDeviceTypeInfo);
+    // routeIndicator.post("/create/devicetype/:schemaname", deviceType.createDeviceType);
+    // routeIndicator.put("/update/devicetype/:schemaname", deviceType.updateDeviceType);
+    // routeIndicator.put("/delete/devicetype/:schemaname", deviceType.deleteDeviceType);
+    // routeIndicator.get("/getallindicator/devicetype/:schemaname", deviceType.getAllDeviceTypeInfo);
+    // routeIndicator.get("/getindicator/devicetype/:schemaname", deviceType.getDeviceTypeInfo);
 
-    app.use("/api/indicator", routeIndicator);
+    routeIndicator.get("/getcountbyprojectid/:schemaname", deviceType.getCountDeviceTypeByProjectID);
+
+    app.use("/api/devicetype", routeIndicator);
+
 
 
     //Tracking data

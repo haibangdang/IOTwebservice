@@ -36,6 +36,7 @@ exports.updateStation = (req, res) => {
 };
 
 exports.deleteStation = (req, res) => {
+    const schemaname = req.params.schemaname;
     const id = req.query.id;
 
     station.schema(schemaname).destroy({
