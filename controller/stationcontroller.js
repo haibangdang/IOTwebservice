@@ -17,7 +17,7 @@ exports.createStation = (req, res) => {
 
 exports.updateStation = (req, res) => {
     const schemaname = req.params.schemaname;
-    const id = req.body.id;
+    const id = req.query.id;
 
     if (!id) {
         res.sendStatus(statuscode.STATUS_NOT_FOUND);
